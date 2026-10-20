@@ -26,7 +26,7 @@ class Book
 
 public function getInfo()
   {
-      return "{$this->title} by {$this->author} ({$this->year}) {$this->price}";
+      return "{$this->title} by {$this->author} ({$this->year}) - $" . $this->price;
 }
 }
 

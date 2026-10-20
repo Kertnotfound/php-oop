@@ -1,6 +1,13 @@
 <?php
 
-use App\Services\ArticleService;
+require_once 'App/Models/Article.php';
+require_once 'App/Services/ArticleService.php';
 
-$articleService = new ArticleService();
-echo $article = $articleService->createArticle("My Article", "John Doe");
+use App\Services\ArticleService;
+use App\Models\Article;
+
+$service = new ArticleService();
+$article = $service->createArticle("My Article", "John Doe");
+
+echo $article->title . " by " . $article->author;
+echo $article->content;
